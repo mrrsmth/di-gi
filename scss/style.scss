@@ -1,0 +1,184 @@
+@import 'vars';
+@import 'fonts';
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    min-width: 320px;
+    overflow-x: hidden; //!!!
+    font-family: 'Roboto-Regular', 'Arial', 'sans-serif';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+}
+
+/* ------------------------HEADER-START--------------------------------- */
+.container {
+    padding: 0 20px;
+}
+
+
+@media (min-width:640px) {
+
+    //больше чем
+    .container {
+        padding: 0 30px;
+    }
+}
+
+@media (min-width:768px) {
+    .container {
+        padding: 0 40px;
+    }
+}
+
+@media (min-width:1024px) {
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 40px;
+    }
+}
+
+@media (min-width:1440px) {
+    .container {
+        max-width: 1320px;
+        margin: 0 auto; // Хз нужно ли
+    }
+}
+
+.header {
+    background-color: $accent;
+
+    &__inner {
+        min-height: 80px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+@media (min-width:640px) {
+    .header {
+        &__inner {
+            min-height: 100px;
+        }
+    }
+}
+
+.logo__link {
+    margin-left: 8px;
+}
+
+@media (min-width: 640px) {
+    .logo__link {
+        margin-left: 14px;
+    }
+}
+
+@media (min-width: 768px) {
+    .logo__link {
+        margin-left: 0px;
+    }
+}
+
+
+
+.menu__btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 3px;
+    background-color: #fff;
+    border: none;
+    position: relative;
+
+    &::after {
+        content: "";
+        width: 13px;
+        height: 2px;
+        border-radius: 1px;
+        background-color: $accent;
+        position: absolute;
+        top: 15px;
+        left: 14px;
+        box-shadow: 0 4px 0 0 $accent, 0 8px 0 0 $accent; //тень палки вниз на 4
+    }
+}
+
+@media (min-width: 1440px) {
+    .menu__btn {
+        margin-right: 90px;
+    }
+}
+
+/* ------------------------HEADER-END--------------------------------- */
+
+
+.head {
+    background-image: url(/images/bg-slider.jpg); //!!!
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    min-height: 193px;
+}
+
+/* ------------------------SLIDER-START--------------------------------- */
+.top-slider {
+    background: rgba(33, 33, 33, 0.5);
+
+    &__item {
+        color: #fff;
+        text-align: center;
+    }
+
+    &__title {
+        font-family: 'RobotoCondensed-Regular';
+        font-size: 28px;
+        line-height: 28px;
+        font-weight: 400;
+        text-transform: uppercase;
+        padding-top: 36px;
+        padding-bottom: 28px;
+        max-width: 243px;
+        margin: 0 auto;
+    }
+
+    .slick-dots {
+        display: flex;
+        justify-content: center;
+    }
+    button {
+        font-style: 0;
+        border: none;
+        background-color: $accent;
+        padding: 0;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        margin: 0 10px;
+    }
+}
