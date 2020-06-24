@@ -1,23 +1,16 @@
-"use strict";
 
 let gulp = require('gulp');
-let sass = require('gulp-sass');
+let less = require('gulp-less');
 let plumber = require('gulp-plumber');
 let postcss = require('gulp-postcss');
 let autoprefixer = require('autoprefixer');
 let server = require('browser-sync').create();
 
 
-gulp.task('sass', function(done) {
-	gulp.src('scss/**/*.scss')
-	.pipe(plumber({
-		errorHandler : function(err) {
-		  console.log(err);
-		  this.emit('end');
-		}
-	  }))
-	.pipe(sass({errLogToConsole: true}))
-    .pipe(sass({outputStyle: 'compact'}))
+gulp.task('style', function(done) {
+	gulp.src('less/style.less')
+	.pipe(plumber())
+	.pipe(less())
 	.pipe(postcss([
 		autoprefixer()
 	]))
@@ -36,7 +29,7 @@ gulp.task('serve', function(done) {
 		ui:false
 	});
 	
-	gulp.watch('scss/**/*.scss', gulp.series('sass'));
+	gulp.watch('less/**/*.less', gulp.series('style'));
 	gulp.watch('*.html').on('change', () => {
 		server.reload();
 		done();
@@ -45,4 +38,4 @@ gulp.task('serve', function(done) {
 	done();
 });
 
-gulp.task('default', gulp.series('sass', 'serve'));
+gulp.task('default', gulp.series('style', 'serve'));
