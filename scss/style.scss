@@ -158,7 +158,6 @@ body {
    }
 } */
 
-
 /* ------------------------SLIDER-START--------------------------------- */
 .top-slider {
    background: rgba(33, 33, 33, 0.5);
@@ -247,7 +246,8 @@ body {
 
       &__btn {
          display: block;
-         margin: 0 auto 133px;
+         font-weight: 500;
+         margin: 0 auto 113px;
          margin-top: 45px;
          padding: 16px 45px;
          font-size: 18px;
@@ -285,9 +285,14 @@ body {
 
 @media (min-width: 768px) {
    .top-slider {
+      &__item {
+         min-height: 465px;
+      }
+
       &__title {
          padding-top: 87px;
-         margin: 0 auto 0;//!!!!!!!!!!!!!!!!!!!!!!
+         margin: 0 auto 0; //!!!!!!!!!!!!!!!!!!!!!!
+
          &::after {
             display: none;
          }
@@ -296,13 +301,80 @@ body {
       &__text {
          padding-top: 25px;
          padding-bottom: 32px;
-         font-family: 'RobotoCondensed-Regular';
+         font-family: "RobotoCondensed-Regular";
          font-weight: 400;
          font-size: 18px;
          line-height: 20px;
          display: block;
          max-width: 587px;
-         margin: 0 auto 0;//!!!!
+         margin: 0 auto 0; //!!!!
       }
    }
+}
+
+@media (min-width: 1024px) {
+   .top-slider {
+      &__item {
+         min-height: 618px;
+      }
+
+      &__title {
+         padding-top: 101px;
+         font-size: 84px;
+         line-height: 84px;
+         letter-spacing: 2px;
+         max-width: 750px;
+      }
+
+      .slick-dots {
+         bottom: 80px;
+      }
+   }
+}
+
+@media (min-width: 1440px) {
+   .top-slider {
+      &__item {
+         min-width: 668px;
+      }
+
+      &__title {
+         padding-top: 107px;
+         font-size: 96px;
+         line-height: 96px;
+         letter-spacing: 2px;
+         max-width: 865px;
+      }
+
+      &__text {
+         font-size: 24px;
+         line-height: 26px;
+      }
+   }
+}
+
+/* ------------------------SLIDER-END--------------------------------- */
+
+/* ------------------------CALL-ME--------------------------------- */
+
+.call {
+   background-color: $accent;
+   padding: 40px 0;
+   text-align: center;
+   color: #fff;
+
+   &__title {
+      @extend %roboto-500; //!! check vars
+      font-size: 24px;
+      line-height: 24px;
+      max-width: 280px;
+      margin-bottom: 10px;
+   }
+
+   &__text {
+      @extend %dosis-300;
+   }
+
+   &__btn {}
+
 }
