@@ -1,14 +1,14 @@
-@import 'vars';
-@import 'fonts';
+@import "vars";
+@import "fonts";
 
 html {
-    box-sizing: border-box;
+   box-sizing: border-box;
 }
 
 *,
 *::after,
 *::before {
-    box-sizing: inherit;
+   box-sizing: inherit;
 }
 
 h1,
@@ -17,196 +17,292 @@ h3,
 h4,
 h5,
 h6 {
-    margin: 0;
+   margin: 0;
 }
 
 ul,
 li {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+   margin: 0;
+   padding: 0;
+   list-style: none;
+}
+
+button {
+   padding: 0;
+}
+
+p {
+   margin: 0;
+   padding: 0;
 }
 
 body {
-    min-width: 320px;
-    overflow-x: hidden; //!!!
-    font-family: 'Roboto-Regular', 'Arial', 'sans-serif';
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 18px;
+   min-width: 320px;
+   overflow-x: hidden; //!!!
+   font-family: "Roboto-Regular", "Arial", "sans-serif";
+   font-weight: 400;
+   font-size: 16px;
+   line-height: 18px;
 }
 
 /* ------------------------HEADER-START--------------------------------- */
 .container {
-    padding: 0 20px;
-}
-
-
-@media (min-width:640px) {
-
-    //больше чем
-    .container {
-        padding: 0 30px;
-    }
-}
-
-@media (min-width:768px) {
-    .container {
-        padding: 0 40px;
-    }
-}
-
-@media (min-width:1024px) {
-    .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 40px;
-    }
-}
-
-@media (min-width:1440px) {
-    .container {
-        max-width: 1320px;
-        margin: 0 auto; // Хз нужно ли
-    }
-}
-
-.header {
-    background-color: $accent;
-
-    &__inner {
-        min-height: 80px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-}
-
-@media (min-width:640px) {
-    .header {
-        &__inner {
-            min-height: 100px;
-        }
-    }
-}
-
-.logo__link {
-    margin-left: 8px;
+   padding: 0 20px;
 }
 
 @media (min-width: 640px) {
-    .logo__link {
-        margin-left: 14px;
-    }
+
+   //больше чем
+   .container {
+      padding: 0 30px;
+   }
 }
 
 @media (min-width: 768px) {
-    .logo__link {
-        margin-left: 0px;
-    }
+   .container {
+      padding: 0 40px;
+   }
 }
 
-
-
-.menu__btn {
-    width: 40px;
-    height: 40px;
-    border-radius: 3px;
-    background-color: #fff;
-    border: none;
-    position: relative;
-
-    &::after {
-        content: "";
-        width: 13px;
-        height: 2px;
-        border-radius: 1px;
-        background-color: $accent;
-        position: absolute;
-        top: 15px;
-        left: 14px;
-        box-shadow: 0 4px 0 0 $accent, 0 8px 0 0 $accent; //тень палки вниз на 4
-    }
+@media (min-width: 1024px) {
+   .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 40px;
+   }
 }
 
 @media (min-width: 1440px) {
-    .menu__btn {
-        margin-right: 90px;
-    }
+   .container {
+      max-width: 1320px;
+      margin: 0 auto; // Хз нужно ли
+   }
+}
+
+.header {
+   background-color: $accent;
+
+   &__inner {
+      min-height: 80px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+}
+
+@media (min-width: 640px) {
+   .header {
+      &__inner {
+         min-height: 100px;
+      }
+   }
+}
+
+.logo__link {
+   margin-left: 8px;
+}
+
+@media (min-width: 640px) {
+   .logo__link {
+      margin-left: 14px;
+   }
+}
+
+@media (min-width: 768px) {
+   .logo__link {
+      margin-left: 0px;
+   }
+}
+
+.menu__btn {
+   width: 40px;
+   height: 40px;
+   border-radius: 3px;
+   background-color: #fff;
+   border: none;
+   position: relative;
+
+   &::after {
+      content: "";
+      width: 13px;
+      height: 2px;
+      border-radius: 1px;
+      background-color: $accent;
+      position: absolute;
+      top: 15px;
+      left: 14px;
+      box-shadow: 0 4px 0 0 $accent, 0 8px 0 0 $accent; //тень палки вниз на 4
+   }
+}
+
+@media (min-width: 1440px) {
+   .menu__btn {
+      margin-right: 90px;
+   }
 }
 
 /* ------------------------HEADER-END--------------------------------- */
 
-
 .head {
-    background-image: url(/images/bg-slider.jpg); //!!!
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    min-height: 193px;
+   background-image: url(../images/bg-slider.jpg); //!!!
+   background-repeat: no-repeat;
+   background-position: center center;
+   background-size: cover;
+   min-height: 193px;
 }
+
+/* @media (min-width: 640px) {
+   .head {
+      min-height: 386px;
+      background-position: center center;//!!!!!!!!!!!
+   }
+} */
+
 
 /* ------------------------SLIDER-START--------------------------------- */
 .top-slider {
-    background: rgba(33, 33, 33, 0.5);
+   background: rgba(33, 33, 33, 0.5);
 
-    &__item {
-        color: #fff;
-        text-align: center;
-        min-height: 193px;
+   &__item {
+      color: #fff;
+      text-align: center;
+      min-height: 193px;
+   }
 
-    }
+   &__title {
+      font-family: "RobotoCondensed-Regular";
+      font-size: 28px;
+      line-height: 28px;
+      font-weight: 400;
+      text-transform: uppercase;
+      padding-top: 36px;
+      padding-bottom: 28px;
+      max-width: 243px;
+      margin: 0 auto;
+      position: relative;
 
-    &__title {
-        font-family: 'RobotoCondensed-Regular';
-        font-size: 28px;
-        line-height: 28px;
-        font-weight: 400;
-        text-transform: uppercase;
-        padding-top: 36px;
-        padding-bottom: 28px;
-        max-width: 243px;
-        margin: 0 auto;
-        position: relative;
+      &::after {
+         content: "";
+         position: absolute;
+         left: 0;
+         right: 0;
+         bottom: 0;
 
-        &::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            right: 0;
-            bottom: 0;
+         margin: 0 auto;
+         width: 61px;
+         height: 8px;
+         background-color: $text-color;
+      }
+   }
 
-            margin: 0 auto;
-            width: 61px;
-            height: 8px;
-            background-color: $text-color;
-        }
-    }
+   &__text {
+      display: none;
+   }
 
-    .slick-dots {
-        display: flex;
-        justify-content: center;
-        position: absolute;
-        bottom: 20px;
-        left: 0;
-        right: 0;
+   &__btn {
+      display: none;
+   }
 
-        .slick-active {
-            button {
-                background-color: transparent;
-                border: 1px solid #476E4D;
-            }
-        }
+   .slick-dots {
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      bottom: 20px;
+      left: 0;
+      right: 0;
 
-        button {
-            font-size: 0;
-            border: none;
-            background-color: $accent;
-            padding: 0;
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            margin: 0 10px;
-        }
-    }
+      .slick-active {
+         button {
+            background-color: transparent;
+            border: 1px solid #476e4d;
+         }
+      }
+
+      button {
+         font-size: 0;
+         border: none;
+         background-color: $accent;
+         padding: 0;
+         width: 10px;
+         height: 10px;
+         border-radius: 50%;
+         margin: 0 10px;
+      }
+   }
+}
+
+@media (min-width: 640px) {
+   .top-slider {
+      &__item {
+         min-height: 386px;
+      }
+
+      &__title {
+         font-size: 60px;
+         line-height: 60px;
+         padding-top: 50px;
+         padding-bottom: 30px;
+         min-width: 520px;
+      }
+
+      &__btn {
+         display: block;
+         margin: 0 auto 133px;
+         margin-top: 45px;
+         padding: 16px 45px;
+         font-size: 18px;
+         line-height: 18px;
+         background-color: $accent;
+         border: none;
+         border-radius: 3px;
+         color: $bg-color;
+      }
+
+      .slick-dots {
+         bottom: 50px;
+      }
+
+      .slick-arrow {
+         width: 56px;
+         height: 56px;
+         border: none;
+         position: absolute;
+         right: 0;
+         z-index: 5;
+      }
+
+      .slick-prev {
+         background-color: $accent;
+         top: calc(50% - 56px);
+      }
+
+      .slick-next {
+         background-color: $bg-color;
+         top: 50%;
+      }
+   }
+}
+
+@media (min-width: 768px) {
+   .top-slider {
+      &__title {
+         padding-top: 87px;
+         margin: 0 auto 0;//!!!!!!!!!!!!!!!!!!!!!!
+         &::after {
+            display: none;
+         }
+      }
+
+      &__text {
+         padding-top: 25px;
+         padding-bottom: 32px;
+         font-family: 'RobotoCondensed-Regular';
+         font-weight: 400;
+         font-size: 18px;
+         line-height: 20px;
+         display: block;
+         max-width: 587px;
+         margin: 0 auto 0;//!!!!
+      }
+   }
 }
