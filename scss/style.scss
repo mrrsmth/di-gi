@@ -418,6 +418,7 @@
          .services__item-title {
             margin-bottom: 30px;
          }
+
          .services__item-inner {
             border: 4px solid $accent;
             margin: 18px;
@@ -433,7 +434,7 @@
    &__item-title {
       font-size: 16px;
       line-height: 19px;
-      letter-spacing: 2px; //тк это H1-h6( для сео)
+      letter-spacing: 2px; //тк это H1-h6( для SEO)
       color: $accent;
       @extend %robotocondenced-700;
    }
