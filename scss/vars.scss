@@ -1,12 +1,25 @@
 $accent: #2B4074;
 $text-color: #4A4A4A;
 $bg-color: #F9F6E5;
+$default-color: #9B9B9B;;
 
 %dosis-300 {
     font-family: 'Dosis-Light';
-    font-weight: 300;
+    font-weight: 300;//миксины
+}
+%dosis-500 {
+    font-family: 'Dosis-Medium';
+    font-weight: 500;//миксины
 }
 %roboto-500 {
     font-family: 'Roboto-Medium';
     font-weight: 500;
+}
+%robotocondenced-400 {
+    font-family: 'RobotoCondenced-Regular';
+    font-weight: 500;
+}
+%robotocondenced-700 {
+    font-family: 'RobotoCondenced-Bold';
+    font-weight: 700;
 }
