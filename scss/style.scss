@@ -2,8 +2,6 @@
 @import "fonts";
 @import "global";
 
-
-
 .header {
    background-color: $accent;
 
@@ -312,7 +310,6 @@
    &__text {
       /* @extend %dosis-300; //!!! check vars посмотреть экстенды */
       margin-bottom: 40px;
-
    }
 
    &__btn {
@@ -370,10 +367,7 @@
 
 /* ------------------------CALL-ME- END-------------------------------- */
 
-
 /* ------------------------SERVICES------------------------------------ */
-
-
 .services {
    text-align: center;
    padding: 25px 0 40px;
@@ -454,5 +448,43 @@
       color: $accent;
       margin-bottom: 28px;
       @extend %robotocondenced-700;
+   }
+}
+
+@media (min-width: 640px) {
+   .services {
+      padding: 24px 0 99px;
+
+      &__title {
+         font-size: 48px;
+         line-height: 56px;
+         margin-bottom: 20px;
+         padding-bottom: 0;
+
+         &::after {
+            display: none;
+         }
+      }
+
+      &__descr {
+         font-size: 24px;
+         padding-bottom: 38px;
+         margin-bottom: 23px;
+         position: relative;
+
+         &::after {
+            content: "";
+            position: absolute;
+            width: 100px;
+            height: 8px;
+            background-color: $accent;
+            margin: 0 auto;
+            bottom: 0;
+            left: 0;
+            right: 0;
+
+         }
+      }
+
    }
 }
