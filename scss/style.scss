@@ -403,7 +403,6 @@
       }
 
       &:hover {
-
          .services__item-text,
          .services__item-link {
             opacity: 1;
@@ -763,6 +762,11 @@
 
    &__item-img {
       border-radius: 4px;
+      &:hover {
+         .project__item-inner {
+            opacity: 1;
+         }
+      }
    }
 
    &__item-img1 {
@@ -808,6 +812,8 @@
       border-radius: 4px;
       min-height: 227px;
       min-width: 256px;
+      opacity: 0;
+      transition: all 0.5s;
    }
 
    &__item-link {
@@ -820,5 +826,3 @@
       @extend %robotocondenced-700;
    }
 }
-
-
