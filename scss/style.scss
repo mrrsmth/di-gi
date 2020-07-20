@@ -594,7 +594,7 @@
 
       &__item {
          min-height: 277px;
-         max-width: 25%;
+         max-width: 24%;
          padding: 0 17px;
 
          &:nth-child(2),
@@ -675,7 +675,7 @@
 
 /* ------------------------SERVICES-END----------------------------------------------------- */
 /* ---------------------------------PROJECT-------------------------------------------------- */
-/* .project {
+/*  .project {
    background: linear-gradient(180deg, #2b4074 0%, rgba(43, 64, 116, 0) 100%);
 
    &__title {
@@ -731,8 +731,8 @@
       color: #2b4074;
       @extend %robotocondenced-700;
    }
-}
- */
+} */
+
 .project {
    background: linear-gradient(180deg, #2b4074 0%, rgba(43, 64, 116, 0) 100%);
 
@@ -768,10 +768,6 @@
 
       &__item-img {
          border-radius: 4px;
-         /*   &:hover {
-         .project__item-inner {
-            opacity: 1;
-         } */
       }
    }
 
@@ -869,23 +865,21 @@
       }
 
       &__item-inner {
-
-         top: 19px;
-         left: 52px;
-         width: 470px;
-         height: 417px;
-         opacity: 0;
-         transition: all 0.5s;
+         top: 24px;
+         left: 63px;
+         min-height: 417px;
+         min-width: 469px;
       }
    }
 }
 
+
 @media (min-width: 768px) {
    .project {
       &__title {
-         font-size: 48px;
-         line-height: 56px;
-         padding-bottom: 80px;
+         padding-top: 80px;
+         padding-top: 24px;
+         margin-bottom: 80px;
 
          &::after {
             content: "";
@@ -904,43 +898,122 @@
          display: flex;
          flex-wrap: wrap;
          justify-content: space-between;
+
       }
 
       &__item-img1 {
-         max-width: 317px;
-         max-height: 282px;
-         background-position: 25px 60px;
-         background-image: url('img/background/avatar.jpg');
-
-
+         min-width: 317.23px;
+         min-height: 282.91px;
       }
 
       &__item-img2 {
-         max-width: 317px;
-         max-height: 282px;
-         background-position: right top;
+         min-width: 317.23px;
+         min-height: 282.91px;
       }
 
       &__item-img3 {
-         max-width: 317px;
-         max-height: 282px;
-
+         min-width: 317.23px;
+         min-height: 282.91px;
       }
 
       &__item-img4 {
-         max-width: 317px;
-         max-height: 282px;
+         min-width: 317.23px;
+         min-height: 282.91px;
+      }
+
+      &__item-inner {
+         top: 24px;
+         left: 63px;
+         min-height: 200px;
+         min-width: 200px; //!!!!доделать
+      }
+
+      &__item-link {
+         margin-bottom: 80px;
+      }
+   }
+}
+
+@media (min-width: 1024px) {
+   .project {
+
+      &__item-img1 {
+         margin-left: 140px;
+      }
+
+      &__item-img2 {
+         margin-right: 140px;
+      }
+
+      &__item-img3 {
+         margin-left: 140px;
+      }
+
+      &__item-img4 {
+         margin-right: 140px;
 
       }
 
       &__item-inner {
+         top: 24px;
+         left: 63px;
+         min-height: 200px;
+         min-width: 200px; //!!!!доделать
+      }
+
+      &__item-link {
+         margin-bottom: 80px;
+      }
+   }
+}
+
+@media (min-width: 1440px) {
+   .project {
+      &__items {
+         display: flex;
+         flex-wrap: nowrap;
+         margin: 0 auto;
+         min-width: 1138px;
+
+      }
+
+      &__item-img1 {
+         max-width: 268px;
+         max-height: 239px;
+         margin-left: 0px;
+         margin-right: 20px;
+      }
+
+      &__item-img2 {
+         max-width: 268px;
+         max-height: 239px;
+         margin-right: 0;
+         margin-right: 20px;
+      }
+
+      &__item-img3 {
+         max-width: 268px;
+         max-height: 239px;
+         margin-left: 0;
+         margin-right: 20px;
+      }
+
+      &__item-img4 {
+         max-width: 268px;
+         max-height: 239px;
+         margin-right: 0;
+      }
+
+      &__item-inner {
          display: none;
-         top: 19px;
-         left: 52px;
-         width: 470px;
-         height: 417px;
-         opacity: 0;
-         transition: all 0.5s;
+         top: 24px;
+         left: 63px;
+         min-height: 200px;
+         min-width: 200px; //!!!!доделать
+      }
+
+      &__item-link {
+         margin-bottom: 80px;
       }
    }
 }
