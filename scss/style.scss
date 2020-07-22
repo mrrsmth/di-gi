@@ -675,63 +675,6 @@
 
 /* ------------------------SERVICES-END----------------------------------------------------- */
 /* ---------------------------------PROJECT-------------------------------------------------- */
-/*  .project {
-   background: linear-gradient(180deg, #2b4074 0%, rgba(43, 64, 116, 0) 100%);
-
-   &__title {
-      color: #ffffff;
-      text-align: center;
-      padding-top: 20px;
-      margin-bottom: 41px;
-
-      &::after {
-         content: "";
-         position: absolute;
-         width: 50px;
-         height: 8px;
-         background-color: #fff;
-         bottom: 0;
-         margin: 0 auto;
-         left: 0;
-         right: 0;
-      }
-   }
-   &__item {
-      margin-bottom: 20px;
-      text-align: center;
-   }
-
-   &__images {
-      height: auto;
-      max-width: 280px;
-      margin-bottom: 20px;
-      display: block;
-      position: relative;
-      &:hover{
-         .project__layer {
-            position: absolute;
-            top: 1px;
-            left: 1px;
-            display: block;
-         }
-      }
-   }
-   &__layer {
-      display: none;
-      max-width: 253px;
-      min-height: 226px;
-      background-color: #f9f6e5;
-      border-radius: 4px;
-      opacity: 0.83;
-   }
-
-   &__item-link {
-      font-size: 16px;
-      line-height: 19px;
-      color: #2b4074;
-      @extend %robotocondenced-700;
-   }
-} */
 
 .project {
    background: linear-gradient(180deg, #2b4074 0%, rgba(43, 64, 116, 0) 100%);
@@ -806,14 +749,14 @@
    &__item-inner {
       position: absolute;
       top: 12px;
-      left: 25px;
+      left: 9px;
       display: flex;
       justify-content: center;
       align-items: center;
       background-color: rgba($bg-color, 0.83);
       border-radius: 4px;
       min-height: 227px;
-      min-width: 296px;
+      min-width: 260px;
       opacity: 0;
       transition: all 0.5s;
    }
@@ -867,12 +810,11 @@
       &__item-inner {
          top: 24px;
          left: 63px;
-         min-height: 417px;
-         min-width: 469px;
+         max-height: 417px;
+         max-width: 469px;
       }
    }
 }
-
 
 @media (min-width: 768px) {
    .project {
@@ -898,7 +840,6 @@
          display: flex;
          flex-wrap: wrap;
          justify-content: space-between;
-
       }
 
       &__item-img1 {
@@ -923,9 +864,9 @@
 
       &__item-inner {
          top: 24px;
-         left: 63px;
-         min-height: 200px;
-         min-width: 200px; //!!!!доделать
+         left: 27px;
+         max-height: 230px;
+         max-width: 260px; //!!!!доделать
       }
 
       &__item-link {
@@ -936,29 +877,21 @@
 
 @media (min-width: 1024px) {
    .project {
-
-      &__item-img1 {
-         margin-left: 140px;
+      &__items {
+         max-width: 665px;
+         display: flex;
+         margin: 0 auto;
       }
 
-      &__item-img2 {
-         margin-right: 140px;
-      }
-
-      &__item-img3 {
-         margin-left: 140px;
-      }
-
-      &__item-img4 {
-         margin-right: 140px;
-
+      &__item-img {
+         max-height: 282px;
       }
 
       &__item-inner {
          top: 24px;
-         left: 63px;
-         min-height: 200px;
-         min-width: 200px; //!!!!доделать
+         left: 30px;
+         min-height: 230px;
+         min-width: 260px;
       }
 
       &__item-link {
@@ -970,50 +903,233 @@
 @media (min-width: 1440px) {
    .project {
       &__items {
+         max-width: 1320px;
          display: flex;
          flex-wrap: nowrap;
-         margin: 0 auto;
-         min-width: 1138px;
-
       }
 
       &__item-img1 {
-         max-width: 268px;
-         max-height: 239px;
-         margin-left: 0px;
-         margin-right: 20px;
+         margin-right: 10px;
       }
 
       &__item-img2 {
-         max-width: 268px;
-         max-height: 239px;
-         margin-right: 0;
-         margin-right: 20px;
+         margin-right: 10px;
       }
 
       &__item-img3 {
-         max-width: 268px;
-         max-height: 239px;
-         margin-left: 0;
-         margin-right: 20px;
+         margin-right: 10px;
+      }
+   }
+}
+
+/* ---------------------------------PROJECT-END-------------------------------------------------- */
+
+/* ---------------------------------TEAM-------------------------------------------------- */
+
+.team {
+   text-align: center;
+
+   &__images {
+      width: 100%;
+      margin-bottom: 40px;
+   }
+
+   &__title {
+      @extend %robotocondenced-700;
+      font-size: 24px;
+      line-height: 38px;
+      color: $accent;
+      padding-bottom: 28px;
+      margin-bottom: 23px;
+   }
+
+   &__text {
+      font-size: 16px;
+      line-height: 25px;
+      min-height: 270px;
+      color: $default-color;
+      margin-bottom: 84px;
+   }
+
+   &__btn {
+      padding: 21px 26px;
+      background-color: $accent;
+      color: $bg-color;
+      @extend %roboto-500;
+      font-size: 20px;
+      line-height: 18px;
+      border-radius: 3px;
+      border: none;
+      text-transform: uppercase;
+      margin-bottom: 40px;
+   }
+}
+
+@media (min-width: 640px) {
+   .team {
+      padding: 43px 0 53px;
+
+      &__images {
+         margin-bottom: 40px;
       }
 
-      &__item-img4 {
-         max-width: 268px;
-         max-height: 239px;
-         margin-right: 0;
+      &__title {
+         font-size: 36px;
+         line-height: 38px;
+         margin-bottom: 40px;
       }
 
-      &__item-inner {
-         display: none;
-         top: 24px;
-         left: 63px;
-         min-height: 200px;
-         min-width: 200px; //!!!!доделать
+      &__text {
+         text-align: center;
+         margin-bottom: 56px;
+         min-height: 150px;
+      }
+   }
+}
+
+@media (min-width: 768px) {
+   .team {
+      text-align: left;
+      padding: 39px 0 48px;
+
+      &__title {
+         &::after {
+            content: "";
+            position: absolute;
+            width: 100px;
+            height: 8px;
+            background-color: $accent;
+            margin: 0 auto;
+            bottom: 0;
+            left: -305px;
+         }
       }
 
-      &__item-link {
-         margin-bottom: 80px;
+      &__inner {
+         display: flex;
       }
+
+      &__images {
+         max-width: 240px;
+         max-height: 227px;
+         margin-right: 34px;
+      }
+
+      &__title {
+         margin-bottom: 7px;
+      }
+
+      &__text {
+         text-align: left;
+         margin-bottom: 35px;
+         max-width: 407px;
+         min-height: 150px;
+      }
+
+      &__btn {
+         position: relative;
+         top: 0;
+         left: -80px;
+      }
+   }
+}
+
+@media (min-width: 1024px) {
+   .team {
+      text-align: left;
+      padding: 80px 0 80px;
+
+      &__title {
+         margin-top: 20px;
+
+         &::after {
+            content: "";
+            position: absolute;
+            width: 100px;
+            height: 8px;
+            background-color: $accent;
+            margin: 0 auto;
+            bottom: 0;
+            left: -415px;
+         }
+      }
+
+      &__inner {
+         display: flex;
+      }
+
+      &__images {
+         min-width: 395px;
+         min-height: 380px;
+         margin-right: 34px;
+      }
+
+      &__title {
+         margin-bottom: 7px;
+      }
+
+      &__text {
+         margin-bottom: 35px;
+         max-width: 523px;
+         min-height: 192px;
+         line-height: 31px;
+      }
+
+      &__btn {
+         position: relative;
+         top: 0;
+         left: 0;
+      }
+
+   }
+}
+
+@media (min-width: 1440px) {
+   .team {
+      text-align: left;
+      padding: 80px 0 100px;
+
+      &__title {
+         margin-top: 20px;
+
+         &::after {
+            content: "";
+            position: absolute;
+            width: 100px;
+            height: 8px;
+            background-color: $accent;
+            margin: 0 auto;
+            bottom: 0;
+            left: -515px;
+         }
+      }
+
+      &__inner {
+         display: flex;
+      }
+
+      &__images {
+         min-width: 470px;
+         min-height: 430px;
+         margin-right: 93px;
+      }
+
+      &__title {
+         margin-bottom: 40px;
+         margin-top: 0;
+      }
+
+      &__text {
+         margin-bottom: 35px;
+         min-width: 620px;
+         min-height: 230px;
+      }
+
+      &__btn {
+         position: relative;
+         top: 0;
+         left: 0;
+      }
+
    }
 }
