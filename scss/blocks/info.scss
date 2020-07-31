@@ -37,6 +37,14 @@
         color: #fff;
     }
 
+    &__contacts-number:hover {
+        color: darken($bg-color, 20%);
+    }
+
+    &__contacts-email:hover {
+        color: darken($bg-color, 20%);
+    }
+
     &__contacts-title {
         font-size: 18px;
         line-height: 21px;
@@ -48,11 +56,23 @@
         font-style: normal
     }
 
+    &__contacts-title:hover {
+        color: darken($bg-color, 20%);
+    }
+
     &__address {
         font-size: 16px;
         line-height: 20px;
         margin-bottom: 36px;
         color: #fff;
+    }
+
+    &__address-country:hover {
+        color: darken($bg-color, 20%);
+    }
+
+    &__address-street:hover {
+        color: darken($bg-color, 20%);
     }
 
     &__address-title {
@@ -61,6 +81,11 @@
         letter-spacing: 2px;
         margin-bottom: 15px;
         color: $bg-color;
+        font-family: 'RobotoCondensed-Bold';
+    }
+
+    &__address-title:hover {
+        color: darken($bg-color, 20%);
     }
 
     &__help {
@@ -76,10 +101,16 @@
         letter-spacing: 2px;
         margin-bottom: 15px;
         color: $bg-color;
+        font-family: 'RobotoCondensed-Bold';
     }
 
-    &__help-title {
-        margin-bottom: 15px;
+
+    &__help-title:hover {
+        color: darken($bg-color, 20%);
+    }
+
+    &__help-text:hover {
+        color: darken($bg-color, 20%);
     }
 
     &__menu {
@@ -91,6 +122,7 @@
         padding-bottom: 63px;
     }
 
+
     &__menu-link:last-child {
         margin-bottom: 50px;
     }
@@ -101,6 +133,15 @@
         letter-spacing: 2px;
         margin-bottom: 15px;
         color: $bg-color;
+        font-family: 'RobotoCondensed-Bold';
+    }
+
+    &__menu-title:hover {
+        color: darken($bg-color, 20%);
+    }
+
+    &__menu-text:hover {
+        color: darken($bg-color, 20%);
     }
 }
 
