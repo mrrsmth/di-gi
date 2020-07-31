@@ -110,6 +110,8 @@
          border: none;
          border-radius: 3px;
          color: $bg-color;
+         font-family: 'Roboto-Regular';
+
       }
 
       &__btn:hover {
@@ -159,8 +161,9 @@
       &__text {
          padding-top: 25px;
          padding-bottom: 32px;
-/*          @extend %robotocondenced-400;
- */         font-weight: 400;
+         /* @extend %robotocondenced-400; */
+         font-family: 'RobotoCondensed-Regular';
+         font-weight: 400;
          font-size: 18px;
          line-height: 20px;
          display: block;

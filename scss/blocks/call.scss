@@ -5,14 +5,17 @@
     color: #fff;
 
     &__title {
-        @extend %roboto-500; //!! check vars посмотреть экстенды
+        /*       @extend %roboto-500; //!! check vars посмотреть экстенды */
+        font-family: 'Roboto-Regular';
         font-size: 24px;
         line-height: 24px;
         margin-bottom: 15px;
     }
 
     &__text {
-        @extend %dosis-300;
+        /* @extend %dosis-300; */
+        font-family: 'Dosis-Light';
+
         margin-bottom: 40px;
     }
 
@@ -27,10 +30,11 @@
         border: none;
         text-transform: uppercase;
     }
+
     &__btn:hover {
         background-color: darken($accent, 2%);
         color: #fff;
-     }
+    }
 }
 
 @media (min-width: 768px) {

@@ -8,7 +8,8 @@
     }
 
     &__title {
-        @extend %robotocondenced-700;
+        /* @extend %robotocondenced-700; */
+        font-family: 'RobotoCondensed-Regular';
         font-size: 24px;
         line-height: 38px;
         color: $accent;
@@ -22,7 +23,8 @@
         min-height: 270px;
         color: $default-color;
         margin-bottom: 84px;
-        @extend %robotocondenced-400;
+        /* @extend %robotocondenced-400; */
+        font-family: 'Roboto-Regular';
     }
 
     &__btn {

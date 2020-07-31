@@ -8,7 +8,8 @@
         padding-bottom: 20px;
         margin-bottom: 40px;
         color: $accent;
-        @extend %robotocondenced-700;
+        /* @extend %robotocondenced-700; */
+        font-family: 'RobotoCondensed-Regular';
     }
 
     &__img {
@@ -116,7 +117,7 @@
  
  @media (min-width: 1440px) {
     .news {
-       padding: 40px 0 80px;
+       padding: 40px 0 0px;
        text-align: center;
  
        &__title {

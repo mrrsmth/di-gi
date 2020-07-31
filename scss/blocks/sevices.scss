@@ -5,6 +5,8 @@
     &__title {
         margin-bottom: 47px;
         color: $accent;
+        font-family: 'RobotoCondensed-Regular';
+
     }
 
     &__descr {
@@ -12,14 +14,16 @@
         line-height: 24px;
         color: $text-color;
         margin-bottom: 21px;
-        @extend %robotocondenced-400;
+        /* @extend %robotocondenced-400; */
+        font-family: 'Roboto-Regular';
     }
 
     &__text {
         color: #797979;
         font-size: 15px;
         line-height: 17px;
-        @extend %robotocondenced-400;
+               font-family: 'Roboto-Regular';
+
         margin-bottom: 40px;
 
     }
