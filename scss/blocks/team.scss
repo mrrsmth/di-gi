@@ -38,10 +38,12 @@
         border: none;
         text-transform: uppercase;
         margin-bottom: 40px;
+        cursor: pointer;
     }
+
     &__btn:hover {
         background-color: lighten($accent, 20%);
-     }
+    }
 }
 
 @media (min-width: 640px) {
@@ -208,4 +210,3 @@
         }
     }
 }
-
