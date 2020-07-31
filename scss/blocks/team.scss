@@ -1,0 +1,209 @@
+.team {
+    margin-top: 80px;
+    text-align: center;
+
+    &__images {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    &__title {
+        @extend %robotocondenced-700;
+        font-size: 24px;
+        line-height: 38px;
+        color: $accent;
+        padding-bottom: 28px;
+        margin-bottom: 23px;
+    }
+
+    &__text {
+        font-size: 16px;
+        line-height: 24px;
+        min-height: 270px;
+        color: $default-color;
+        margin-bottom: 84px;
+        @extend %robotocondenced-400;
+    }
+
+    &__btn {
+        padding: 21px 26px;
+        background-color: $accent;
+        color: $bg-color;
+        @extend %roboto-500;
+        font-size: 20px;
+        line-height: 18px;
+        border-radius: 3px;
+        border: none;
+        text-transform: uppercase;
+        margin-bottom: 40px;
+    }
+    &__btn:hover {
+        background-color: lighten($accent, 20%);
+     }
+}
+
+@media (min-width: 640px) {
+    .team {
+        padding: 43px 0 53px;
+
+        &__images {
+            margin-bottom: 40px;
+        }
+
+        &__title {
+            font-size: 36px;
+            line-height: 38px;
+            margin-bottom: 40px;
+        }
+
+        &__text {
+            text-align: center;
+            margin-bottom: 56px;
+            min-height: 150px;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .team {
+        text-align: left;
+        padding: 39px 0 48px;
+
+        &__title {
+            margin-bottom: 25px;
+
+            &::after {
+                content: "";
+                position: absolute;
+                width: 100px;
+                height: 8px;
+                background-color: $accent;
+                margin: 0 auto;
+                bottom: 0;
+                left: -305px;
+            }
+        }
+
+        &__inner {
+            display: flex;
+        }
+
+        &__images {
+            max-width: 240px;
+            max-height: 227px;
+            margin-right: 34px;
+        }
+
+        &__text {
+            text-align: left;
+            margin-bottom: 35px;
+            max-width: 407px;
+            min-height: 150px;
+        }
+
+        &__btn {
+            position: relative;
+            top: 0;
+            left: -80px;
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .team {
+        text-align: left;
+        padding: 80px 0 80px;
+
+        &__title {
+            margin-top: 20px;
+
+            &::after {
+                content: "";
+                position: absolute;
+                width: 100px;
+                height: 8px;
+                background-color: $accent;
+                margin: 0 auto;
+                bottom: 0;
+                left: -415px;
+            }
+        }
+
+        &__inner {
+            display: flex;
+        }
+
+        &__images {
+            min-width: 395px;
+            min-height: 380px;
+            margin-right: 34px;
+        }
+
+        &__title {
+            margin-bottom: 7px;
+        }
+
+        &__text {
+            margin-bottom: 35px;
+            max-width: 523px;
+            min-height: 192px;
+            line-height: 31px;
+        }
+
+        &__btn {
+            position: relative;
+            top: 0;
+            left: 0;
+        }
+    }
+}
+
+@media (min-width: 1440px) {
+    .team {
+        text-align: left;
+        padding: 80px 0 100px;
+
+        &__title {
+            margin-top: 20px;
+
+            &::after {
+                content: "";
+                position: absolute;
+                width: 100px;
+                height: 8px;
+                background-color: $accent;
+                margin: 0 auto;
+                bottom: 0;
+                left: -515px;
+            }
+        }
+
+        &__inner {
+            display: flex;
+        }
+
+        &__images {
+            min-width: 470px;
+            min-height: 430px;
+            margin-right: 93px;
+        }
+
+        &__title {
+            margin-bottom: 40px;
+            margin-top: 0;
+        }
+
+        &__text {
+            margin-bottom: 35px;
+            min-width: 620px;
+            min-height: 230px;
+        }
+
+        &__btn {
+            position: relative;
+            top: 0;
+            left: 0;
+        }
+    }
+}
+

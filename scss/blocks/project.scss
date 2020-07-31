@@ -1,0 +1,243 @@
+.project {
+   background: linear-gradient(180deg, #2b4074 0%, rgba(43, 64, 116, 0) 100%);
+
+   &__title {
+      color: #ffffff;
+      text-align: center;
+      padding-top: 20px;
+      margin-bottom: 41px;
+
+      &::after {
+         content: "";
+         position: absolute;
+         width: 50px;
+         height: 8px;
+         background-color: #fff;
+         bottom: 0;
+         margin: 0 auto;
+         left: 0;
+         right: 0;
+      }
+   }
+
+   &__item {
+      text-align: center;
+      margin-bottom: 20px;
+      position: relative;
+
+      &:hover {
+         .project__item-inner {
+            opacity: 1;
+         }
+      }
+   }
+   
+   &__item-img1 {
+      background-image: url(../images/project-1.jpg);
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      min-height: 250px;
+      border-radius: 4px;
+
+   }
+
+   &__item-img2 {
+      background-image: url(../images/project-2.jpg);
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      min-height: 250px;
+      border-radius: 4px;
+
+   }
+
+   &__item-img3 {
+      background-image: url(../images/project-3.jpg);
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      min-height: 250px;
+      border-radius: 4px;
+
+   }
+
+   &__item-img4 {
+      background-image: url(../images/project-4.jpg);
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      min-height: 250px;
+      border-radius: 4px;
+
+   }
+
+   &__item-inner {
+      position: absolute;
+      top: 12px;
+      left: 9px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba($bg-color, 0.83);
+      border-radius: 4px;
+      min-height: 227px;
+      min-width: 260px;
+      opacity: 0;
+      transition: all 0.5s;
+   }
+
+   &__item-link {
+      display: block;
+      letter-spacing: 2px;
+      font-size: 16px;
+      line-height: 19px;
+      margin-top: 20px;
+      color: $accent;
+      @extend %robotocondenced-700;
+   }
+}
+
+@media (min-width: 640px) {
+   .project {
+      &__title {
+         font-size: 48px;
+         line-height: 56px;
+
+         &::after {
+            content: "";
+            position: absolute;
+            width: 100px;
+            height: 8px;
+            background-color: #fff;
+            bottom: 0;
+            margin: 0 auto;
+            left: 0;
+            right: 0;
+         }
+      }
+
+      &__item-img1 {
+         min-height: 460px;
+      }
+
+      &__item-img2 {
+         min-height: 460px;
+      }
+
+      &__item-img3 {
+         min-height: 460px;
+      }
+
+      &__item-img4 {
+         min-height: 460px;
+      }
+
+      &__item-inner {
+         top: 24px;
+         left: 63px;
+         height: 417px;
+         width: 469px;
+      }
+   }
+}
+
+@media (min-width: 768px) {
+   .project {
+      &__title {
+         padding: 80px 0 80px;
+
+         &::after {
+            content: "";
+            position: absolute;
+            width: 100px;
+            height: 8px;
+            background-color: #fff;
+            bottom: 0;
+            margin: 0 auto;
+            left: 0;
+            right: 0;
+         }
+      }
+
+      &__items {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: space-between;
+      }
+
+      &__item-img1 {
+         min-width: 317.23px;
+         min-height: 282.91px;
+      }
+
+      &__item-img2 {
+         min-width: 317.23px;
+         min-height: 282.91px;
+      }
+
+      &__item-img3 {
+         min-width: 317.23px;
+         min-height: 282.91px;
+      }
+
+      &__item-img4 {
+         min-width: 317.23px;
+         min-height: 282.91px;
+      }
+
+      &__item-inner {
+         top: 24px;
+         left: 27px;
+         max-height: 230px;
+         max-width: 260px; //!!!!доделать
+      }
+   }
+}
+
+@media (min-width: 1024px) {
+   .project {
+      &__items {
+         max-width: 665px;
+         display: flex;
+         margin: 0 auto;
+      }
+
+      &__item-img {
+         max-height: 282px;
+      }
+
+      &__item-inner {
+         top: 24px;
+         left: 30px;
+         min-height: 230px;
+         min-width: 260px;
+      }
+
+      &__item-link {
+         margin-bottom: 80px;
+      }
+   }
+}
+
+@media (min-width: 1440px) {
+   .project {
+      &__items {
+         max-width: 1320px;
+         display: flex;
+         flex-wrap: nowrap;
+      }
+
+      &__item-img1 {
+         margin-right: 10px;
+      }
+
+      &__item-img2 {
+         margin-right: 10px;
+      }
+
+      &__item-img3 {
+         margin-right: 10px;
+      }
+   }
+}

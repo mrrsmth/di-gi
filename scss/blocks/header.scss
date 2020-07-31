@@ -1,0 +1,61 @@
+.header {
+    background-color: $accent;
+
+    &__inner {
+        min-height: 80px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+@media (min-width: 640px) {
+    .header {
+        &__inner {
+            min-height: 100px;
+        }
+    }
+}
+
+.logo__link {
+    margin-left: 8px;
+}
+
+@media (min-width: 640px) {
+    .logo__link {
+        margin-left: 14px;
+    }
+}
+
+@media (min-width: 768px) {
+    .logo__link {
+        margin-left: 0px;
+    }
+}
+
+.menu__btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 3px;
+    background-color: #fff;
+    border: none;
+    position: relative;
+
+    &::after {
+        content: "";
+        width: 13px;
+        height: 2px;
+        border-radius: 1px;
+        background-color: $accent;
+        position: absolute;
+        top: 15px;
+        left: 14px;
+        box-shadow: 0 4px 0 0 $accent, 0 8px 0 0 $accent; //тень палки вниз на 4
+    }
+}
+
+@media (min-width: 1440px) {
+    .menu__btn {
+        margin-right: 90px;
+    }
+}

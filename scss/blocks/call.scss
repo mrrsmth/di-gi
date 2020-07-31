@@ -1,0 +1,74 @@
+.call {
+    background-color: $accent;
+    padding: 40px 0;
+    text-align: center;
+    color: #fff;
+
+    &__title {
+        @extend %roboto-500; //!! check vars посмотреть экстенды
+        font-size: 24px;
+        line-height: 24px;
+        margin-bottom: 15px;
+    }
+
+    &__text {
+        @extend %dosis-300;
+        margin-bottom: 40px;
+    }
+
+    &__btn {
+        padding: 16px 15px;
+        background-color: $bg-color;
+        color: $accent;
+        @extend %roboto-500;
+        font-size: 18px;
+        line-height: 18px;
+        border-radius: 3px;
+        border: none;
+        text-transform: uppercase;
+    }
+    &__btn:hover {
+        background-color: darken($accent, 2%);
+        color: #fff;
+     }
+}
+
+@media (min-width: 768px) {
+    .call {
+        text-align: left;
+
+        &__inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &__box {
+            max-width: 427px;
+        }
+
+        &__text {
+            margin-bottom: 0;
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .call {
+        &__box {
+            min-width: 695px;
+        }
+    }
+}
+
+@media (min-width: 1440px) {
+    .call {
+        &__inner {
+            padding: 0 80px;
+        }
+
+        &__box {
+            min-width: 796px;
+        }
+    }
+}
